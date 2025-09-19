@@ -1519,10 +1519,10 @@ init -501:
                     imagebutton idle "gui/preferences/custom_menu_separator.png" hover "gui/preferences/custom_menu_separator.png" action NullAction()
                     if preferences.fullscreen:
                         textbutton _("Okno") action Preference("display", "window") text_style "custom_menu_style_text2"
-                        textbutton _("Pełenekran") action Preference("display", "fullscreen") text_style "custom_menu_style_text2_enabled"
+                        textbutton _("Pełen ekran") action Preference("display", "fullscreen") text_style "custom_menu_style_text2_enabled"
                     else:
                         textbutton _("Okno") action Preference("display", "window") text_style "custom_menu_style_text2_enabled"
-                        textbutton _("Pełenekran") action Preference("display", "fullscreen") text_style "custom_menu_style_text2"
+                        textbutton _("Pełen ekran") action Preference("display", "fullscreen") text_style "custom_menu_style_text2"
                 vpgrid:
                     xminimum 800
                     xmaximum 800
@@ -1584,11 +1584,11 @@ init -501:
                     label _("Przyciski z nagrodami") text_style "custom_menu_style_text" xminimum 350
                     imagebutton idle "gui/preferences/custom_menu_separator.png" hover "gui/preferences/custom_menu_separator.png" action NullAction() xoffset -10
                     if not persistent.rewards_screen_on_hover:
-                        textbutton _("Włączony") action NullAction() text_style "custom_menu_style_text2_enabled" xoffset -5
-                        textbutton _("Ukryty") action SetVariable("persistent.rewards_screen_on_hover",True) text_style "custom_menu_style_text2" xoffset -5
+                        textbutton _("Włączone") action NullAction() text_style "custom_menu_style_text2_enabled" xoffset -5
+                        textbutton _("Ukryte") action SetVariable("persistent.rewards_screen_on_hover",True) text_style "custom_menu_style_text2" xoffset -5
                     else:
-                        textbutton _("Włączony") action SetVariable("persistent.rewards_screen_on_hover",False) text_style "custom_menu_style_text2" xoffset -5
-                        textbutton _("Ukryty") action NullAction() text_style "custom_menu_style_text2_enabled" xoffset -5
+                        textbutton _("Włączone") action SetVariable("persistent.rewards_screen_on_hover",False) text_style "custom_menu_style_text2" xoffset -5
+                        textbutton _("Ukryte") action NullAction() text_style "custom_menu_style_text2_enabled" xoffset -5
                 hbox:
                     xminimum 400
                     spacing 10
@@ -1596,16 +1596,16 @@ init -501:
                     label _("Szybkie menu") text_style "custom_menu_style_text" xminimum 350
                     imagebutton idle "gui/preferences/custom_menu_separator.png" hover "gui/preferences/custom_menu_separator.png" action NullAction() xoffset -10
                     if quick_menu == 2:
-                        textbutton _("Właczone") action SetVariable("quick_menu",2) text_style "custom_menu_style_text2_enabled" xoffset -5
-                        textbutton _("Schowane") action SetVariable("quick_menu",1) text_style "custom_menu_style_text2" xoffset -5
+                        textbutton _("Włączone") action SetVariable("quick_menu",2) text_style "custom_menu_style_text2_enabled" xoffset -5
+                        textbutton _("Ukryte") action SetVariable("quick_menu",1) text_style "custom_menu_style_text2" xoffset -5
                         textbutton _("Wyłączone") action SetVariable("quick_menu",0) text_style "custom_menu_style_text2" xoffset -5
                     elif quick_menu == 1:
-                        textbutton _("Właczone") action SetVariable("quick_menu",2) text_style "custom_menu_style_text2" xoffset -5
-                        textbutton _("Schowane") action SetVariable("quick_menu",1) text_style "custom_menu_style_text2_enabled" xoffset -5
+                        textbutton _("Włączone") action SetVariable("quick_menu",2) text_style "custom_menu_style_text2" xoffset -5
+                        textbutton _("Ukryte") action SetVariable("quick_menu",1) text_style "custom_menu_style_text2_enabled" xoffset -5
                         textbutton _("Wyłączone") action SetVariable("quick_menu",0) text_style "custom_menu_style_text2" xoffset -5
                     else:
-                        textbutton _("Właczone") action SetVariable("quick_menu",2) text_style "custom_menu_style_text2" xoffset -5
-                        textbutton _("Schowane") action SetVariable("quick_menu",1) text_style "custom_menu_style_text2" xoffset -5
+                        textbutton _("Włączone") action SetVariable("quick_menu",2) text_style "custom_menu_style_text2" xoffset -5
+                        textbutton _("Ukryte") action SetVariable("quick_menu",1) text_style "custom_menu_style_text2" xoffset -5
                         textbutton _("Wyłączone") action SetVariable("quick_menu",0) text_style "custom_menu_style_text2_enabled" xoffset -5
                 hbox:
                     spacing 20
