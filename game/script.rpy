@@ -275,7 +275,7 @@ scene d0_intro9 with dissolve
 st "Jesteś zainteresowana, tylko jeszcze o tym nie wiesz."
 stop music fadeout 3
 #st "Live a little, won't ya?"
-st "Żyj trochę, dobrze?"
+st "Zacznij żyć, dobrze?"
 scene d0_intro11 with vpunch
 play sound "sound_effects/slap.mp3"
 $ renpy.pause()
@@ -307,7 +307,7 @@ scene d0_lunchroom2 with dissolve
 #mc "Hey, Josy!"
 mc "Hej, Josy!"
 #js "Hey, [name]."
-js "Hej. [name]"
+js "Hej, [name]"
 #mc "(!!!)"
 mc "(!!!)"
 scene d0_lunchroom4 with dissolve
@@ -484,12 +484,12 @@ scene d0_lunchroom18 with dissolve
 mc "Do bani... To musi być popularny kierunek studiów."
 scene d0_lunchroom20 with dissolve
 #js "Yeah, it's for a business degree. My dad really wanted me to go, since he went there too."
-js "Tak, to na studia biznesowe. Tata bardzo chciał, żebym pojechała, bo on też tam pojechał."
+js "Tak, to na studia biznesowe. Tata bardzo chciał, żebym tam studiowała, bo on też tam studiował."
 scene d0_lunchroom17c with dissolve
 #js "He was so happy when my stepbrother got accepted."
 js "Był taki szczęśliwy, kiedy mój przyrodni brat został przyjęty."
 #js "And he's not going there to study..."
-js "I nie idzie tam studiować..."
+js "I nie zamierza tam studiować..."
 #js "He's just there for the frat life and parties."
 js "Jest tam tylko dla życia bractwa i imprez."
 #js "I'm pretty sure that he cheated his way through high school..."
@@ -518,7 +518,7 @@ scene d0_lunchroom42 with dissolve
 #js "That makes two of us, then."
 js "No to jest nas dwoje. "
 #js "Hey..."
-js "Hej"
+js "Hej..."
 #js "When do you quit work today?"
 js "Kiedy dzisiaj kończysz pracę?"
 scene d0_lunchroom17 with dissolve
@@ -762,17 +762,17 @@ scene d0_home5 with dissolve
 #mc "What's this?"
 mc "Co to?"
 #dad "Open it."
-dad "Otwórz. "
+dad "Otwórz."
 scene d0_home6 with dissolve
 #mc "Dear [name]...your application was..."
-mc "Szanowny [name]...Twój wniosek był..."
+mc "Szanowny Pan [name]...Pana wniosek był..."
 #mc "...you are hereby accepted..."
-mc "... niniejszym przyjmuję..."
+mc "... niniejszym przyjmujemy..."
 #mc "I GOT IN!"
 mc "Dostałam się!"
 scene d0_home7 with dissolve
 #dad "You did!?"
-dad "MALE ! "
+dad "Naprawdę!?"
 #mc "Dad, I got accepted to college!!!"
 mc "Tato, dostałam się na studia!!!"
 scene d0_home9 with dissolve
@@ -782,14 +782,14 @@ scene d0_home10 with dissolve
 #dad "My son...a college freshman."
 dad "Mój syn...student pierwszego roku."
 #dad "How does that feel?"
-dad "Czy jest przyjemnie? "
+dad "Jak się czujesz? "
 #mc "It's just unimaginable!"
 mc "To po prostu niewyobrażalne!"
 scene d0_home12 with dissolve
 #dad "Son, I want you to take the jar from the closet."
 dad "Synu, chcę, żebyś wyjął słoik z szafy."
 #dad "It's yours."
-dad "Jest cała Twoja."
+dad "Jest cały Twój."
 scene d0_home13 with dissolve
 #mc "No, dad. That's not my money."
 mc "Nie, tato. To nie moje pieniądze."
@@ -817,15 +817,15 @@ menu:
 #    "Accept money":
     "Akceptuj pieniądze":
 #        $ bios_history_dad = "Dad gave me money from his personal savings.\n\n"
-        $ bios_history_dad = "Tata dał mi pieniądze ze swoich oszczędności.\n \n"
+        $ bios_history_dad = "Tata dał mi pieniądze ze swoich oszczędności.\n\n"
         $ acceptedMoneyFromDad = True
         $ mny(1)
 #        "{i}Received {color=#36ca2b}${/color}{/i}"
-        "Odebrano"
+        "{i}Odebrano {color=#36ca2b}${/color}{/i}"
 #        mc "Thank you, dad!"
         mc "Dziękuję, tato!"
 #        mc "I love you."
-        mc "Kocham cię.&amp;nbsp;"
+        mc "Kocham cię."
         hide screen moneymsg
         scene d0_home16 with dissolve
 #        dad "I love you too, son."
@@ -834,19 +834,19 @@ menu:
 #    "Ask for more money":
     "Poproś o więcej pieniędzy":
 #        $ bios_history_dad = "Dad gave me money from his personal savings and I even got some more when I asked him.\n\n"
-        $ bios_history_dad = "Tata dał mi pieniądze ze swoich oszczędności, a ja dostałam nawet więcej, kiedy go o to poprosiłam.\n \n"
+        $ bios_history_dad = "Tata dał mi pieniądze ze swoich oszczędności, a ja dostałam nawet więcej, kiedy go o to poprosiłam.\n\n"
         $ dk(1)
         $ acceptedMoneyFromDad = True
 #        mc "Didn't you get your paycheck today?"
         mc "Nie dostałeś dzisiaj wypłaty?"
         scene d0_home16b with dissolve
 #        dad "Oh, yeah. I did..."
-        dad "- Jasne, że wysłałam."
+        dad "Oh, jasne, dostałem..."
 #        dad "I think I can throw in a little bit extra for you."
         dad "Myślę, że mogę dorzucić trochę więcej."
         $ mny(2)
 #        "{i}Received {color=#36ca2b}$${/color}{/i}"
-        "Odebrano"
+        "{i}Odebrano {color=#36ca2b}$${/color}{/i}"
         scene d0_home16 with dissolve
 #        dad "I love you, son."
         dad "Kocham cię, mój synu"
@@ -855,19 +855,19 @@ menu:
 #    "Reject money":
     "Odrzuć pieniądze":
 #        $ bios_history_dad = "Dad tried to give me money from his personal savings, but that's his money, he earned that.\n\n"
-        $ bios_history_dad = "Tata próbował dać mi pieniądze ze swoich osobistych oszczędności, ale to są jego pieniądze, zarobił je.\n \n"
+        $ bios_history_dad = "Tata próbował dać mi pieniądze ze swoich osobistych oszczędności, ale to są jego pieniądze, zarobił je.\n\n"
         $ dk(-1)
         $ acceptedMoneyFromDad = False
 #        mc "I'm sorry, dad, but no."
         mc "Przykro mi, tato, ale nie."
         hide screen moneymsg
 #        mc "I can't accept this. I'll take a student loan and will find a way to earn some extra pocket money."
-        mc "Nie mogę tego przyjąć. Wezmę pożyczkę studencką i znajdę sposób, aby zarobić trochę dodatkowych kieszonkowego."
+        mc "Nie mogę tego przyjąć. Wezmę pożyczkę studencką i znajdę sposób, aby zarobić trochę dodatkowych pieniędzy."
         scene d0_home16 with dissolve
 #        dad "I love you, son."
         dad "Kocham cię, mój synu"
 #        dad "You make me so proud."
-        dad "Sprawiasz, że jestem taka dumna."
+        dad "Sprawiasz, że jestem taki dumny."
         scene d0_home13 with dissolve
 #        mc "I love you too, dad."
         mc "Ja też Cię kocham."
@@ -912,14 +912,14 @@ bs "Myślę, że to sprawiedliwe, że dostajesz mniej niż uzgodniono."
 scene d0_bossb with dissolve
 menu:
 #    "Push him for more":
-    "Popchnij go o więcej":
+    "Poproś go o więcej":
         $ dk(1)
 #        mc "That's not fair at all. I'm pretty sure it's illegal, too."
         mc "To w ogóle niesprawiedliwe. Jestem prawie pewien, że to też nielegalne."
         scene d0_boss with dissolve
         if stevePainting > 0:
 #            bs "Vandalizing company property is also illegal, buddy. I saw what you did to Steve's photo on the security cam."
-            bs "Wandalizacja mienia firmy jest również nielegalna, kolego. Widziałem, co zrobiłeś ze zdjęciem Steve 'a na kamerze bezpieczeństwa."
+            bs "Wandalizacja mienia firmy jest również nielegalna, kolego. Widziałem, co zrobiłeś ze zdjęciem Steve'a na kamerze bezpieczeństwa."
 #            bs "You know what? I changed my mind. I'm keeping your pay as compensation for the damages."
             bs "Wiesz co, zmieniłem zdanie. Zatrzymuję Twoją wypłatę jako rekompensatę za szkody."
         else:
@@ -928,7 +928,7 @@ menu:
             $ mny(2)
             show screen moneymsg
 #            "{i}Received {color=#36ca2b}$${/color}{/i}"
-            "Odebrano"
+            "{i}Odebrano {color=#36ca2b}$${/color}{/i}"
             hide screen moneymsg
 #    "Accept less":
     "Akceptuj mniej":
@@ -939,7 +939,7 @@ menu:
         $ mny(1)
         scene d0_boss with dissolve
 #        "{i}Received {color=#36ca2b}${/color}{/i}"
-        "Odebrano"
+        "{i}Odebrano {color=#36ca2b}${/color}{/i}"
 #        bs "That's only because I'm generous. Make sure you remember that."
         bs "To tylko dlatego, że jestem hojny. Pamiętaj o tym."
         hide screen moneymsg
@@ -951,7 +951,7 @@ scene d0_js with wipeleft
 #mc "Hi, Josy."
 mc "Cześć, Josy."
 #js "Hey, [name]!"
-js "Hej,"
+js "Hej, [name]!"
 #js "Everything good?"
 js "Wszystko ok?"
 scene d0_js2 with dissolve
@@ -980,7 +980,7 @@ menu:
 #        js "Hey, don't feel sorry for me."
         js "Hej, nie współczuj mi."
 #        js "I only need 13 people to decline, and I'm golden."
-        js "Potrzebuję tylko 13 osób, aby odmówić, a jestem złoty."
+        js "Wystarczy, że 13 osób odmówi i się dostanę."
         scene d0_js4b with dissolve
 #        mc "Haha! I'm glad that you're staying positive."
         mc "Haha! Cieszę się, że masz pozytywne nastawienie."
@@ -996,11 +996,11 @@ menu:
         js "Idź gonić swoje marzenia!"
         scene d0_js6b with dissolve
 #js "But I will miss you."
-js "Będzie mi was brakowało. "
+js "Będzie mi Cię brakowało."
 if dtype < 0:
     scene d0_js8 with dissolve
 #    "*{i}Smack{/i}*"
-    "Wymierz cios"
+    "*{i}Cmoknięcie{/i}*"
 scene d0_js9 with dissolve
 #mc "I'll come back and visit once in a while, you know."
 mc "Wpadnę cię odwiedzić raz na jakiś czas, wiesz."
@@ -1016,10 +1016,10 @@ scene d0_js9 with dissolve
 mc "Zaczynam w poniedziałek."
 scene d0_js10 with dissolve
 #js "No way! This Monday?"
-js "Nie ma mowy! W ten poniedziałek?"
+js "Co!? W ten poniedziałek?"
 scene d0_js9 with dissolve
 #mc "Yeah, afraid so."
-mc "Tak, obawiam się, że tak."
+mc "Obawiam się, że tak."
 scene d0_js12b with dissolve
 #js "Hey, I know!"
 js "Hej, wiem!"
@@ -1038,7 +1038,7 @@ menu:
 #    "Ok":
     "OK":
 #        mc "Ok. I will."
-        mc "- OK, I will."
+        mc "OK, będę."
 #    "It's a date!":
     "To jest randka!":
         $ RPjosy += 1
@@ -1059,12 +1059,12 @@ if stevePainting >0:
     scene d0_js17c with dissolve
     menu:
 #        "Trigger him":
-        "Uruchomić go":
+        "Sprowokuj go":
             $ dk(1)
 #            mc "I've been known to tell a joke or two."
-            mc "Byłem znany z tego, że opowiadałem dowcip lub dwa."
+            mc "Jestem znany z tego, że opowiadam dowcipy."
 #            mc "Knock knock."
-            mc "Knock, knock."
+            mc "Puk, puk."
             scene d0_js17d with dissolve
 #            st "Fuck you!"
             st "Pierdol się!"
@@ -1086,7 +1086,7 @@ if stevePainting >0:
         scene d0_js17d2 with dissolve
     else:
 #        st "Why the fuck did you draw on my picture!?"
-        st "Dlaczego, do kurwy nędzy, rysowałeś na moim obrazku!?"
+        st "Dlaczego, do kurwy nędzy, rysowałeś na moim zdjęciu!?"
 #    st "I earned that award!"
     st "Zasłużyłem na tę nagrodę!"
     scene d0_js18 with dissolve
@@ -1111,16 +1111,16 @@ scene d0_js18 with dissolve
 st "*{i}Prycha{/i}* B&R, uczelnia biedaka."
 scene d0_js19 with dissolve
 #mc "What are you talking about? It's not a bad college."
-mc "O czym ty mówisz? To nie jest zły college."
+mc "O czym ty mówisz? To nie jest zła uczelnia."
 scene d0_js18 with dissolve
 #st "Aside from that preppy, silver spoon in their asses frat house..."
-st "Poza tą elegancką, srebrną łyżką w tyłku..."
+st "Oprócz tego eleganckiego, bogatego bractwa studenckiego..."
 #st "...yeah, people who go there are trash."
 st "...tak, ludzie, którzy tam chodzą, są śmieciami."
 scene d0_js19 with dissolve
 menu:
 #    "Retort":
-    "Retorta":
+    "Stanowcza odpowiedź":
         $ dk(1)
 #        mc "You're one to talk!"
         mc "Jesteś jednym z tych, którzy mówią!"
@@ -1168,7 +1168,7 @@ scene d0_fight0 with vpunch
 $ renpy.pause(0.5)
 scene d0_fight2 with dissolve
 #dad "Great! Don't stop now!"
-dad "Świetnie! Nie przestawaj teraz!"
+dad "Świetnie! Teraz nie przestawaj!"
 #dad "High kick!"
 dad "Wysokie kopnięcie!"
 play sound "sound_effects/hit.mp3"
@@ -1211,7 +1211,7 @@ mc "Tak"
 dad "Coś się stało?"
 scene d0_fight8 with dissolve
 #mc "Well, there's this girl...Josy."
-mc "No jest taka dziewczyna...Josy."
+mc "No jest taka dziewczyna... Josy."
 #mc "I have a crush on her, and now I'm moving away from here."
 mc "Zakochałem się w niej, a teraz się stąd wyprowadzam."
 #mc "I feel pretty bad about it."
@@ -1228,7 +1228,7 @@ dad "Jak wiesz, pracowałam już na budowie, kiedy poznałam twoją mamę."
 dad "Jej ojciec, który był obrzydliwie bogaty, zatrudnił mnie, żebym pomógł mu zbudować hotel."
 scene d0_fight11 with fade
 #dad "Your mom was a very beautiful woman. I was 24, and she had just turned 18."
-dad "Twoja mama była bardzo piękną kobietą. Miałam 24 lata, a ona właśnie skończyła 18."
+dad "Twoja mama była bardzo piękną kobietą. Miałem 24 lata, a ona właśnie skończyła 18."
 #dad "Her dad disapproved of me being with his daughter. In his eyes, I was of a lower class."
 dad "Jej tata nie pochwalał tego, że jestem z jego córką. W jego oczach należałem do niższej klasy."
 scene d0_fight12 with dissolve
@@ -1236,20 +1236,20 @@ scene d0_fight12 with dissolve
 dad "Twoja mama nie widziała tego w ten sposób. Spojrzała poza to wszystko i zakochaliśmy się."
 scene d0_fight13 with dissolve
 #dad "To her father's dismay, he couldn't get her to stop seeing me."
-dad "Ku przerażeniu jej ojca nie mógł przestać się ze mną widywać."
+dad "Ku rozczarowaniu jej ojca, nie udało mu się powstrzymać jej przed spotkaniami ze mną."
 #dad "But he knew that once the hotel was built, there was no reason for me to stay and work in that town."
 dad "Ale wiedział, że po wybudowaniu hotelu nie było powodu, abym został i pracował w tym mieście."
 scene d0_fight14 with dissolve
 #dad "And when that day came, I left. I had to make a living after all."
-dad "A kiedy ten dzień nadszedł, wyszedłem. W końcu musiałem zarabiać na życie."
+dad "A kiedy ten dzień nadszedł, odszedłem. W końcu musiałem zarabiać na życie."
 #dad "So, with a heavy heart, I left Lynette."
 dad "Więc z ciężkim sercem opuściłem Lynette."
 scene d0_fight15 with dissolve
 #dad "But before doing so, I gave her the best kiss I ever could have given her."
-dad "Ale zanim to zrobiłem, pocałowałem ją najlepiej, jak mogłem."
+dad "Ale zanim to zrobiłem, dałem jej najlepszy pocałunek, jaki mogłem jej dać."
 scene d0_fight16 with dissolve
 #dad "To me...that was it."
-dad "Dla mnie...to było to."
+dad "Dla mnie... to było to."
 #dad "The last time I would ever gaze upon her."
 dad "Ostatni raz, kiedy na nią spojrzałem."
 scene black with fade
@@ -1259,19 +1259,19 @@ scene d0_fight18 with dissolve
 #dad "It took her three days to run away from home and track me down."
 dad "Ucieczka z domu i wyśledzenie mnie zajęło jej trzy dni."
 #dad "No...wait...five days?"
-dad "Nie...czekaj...pięć dni?"
+dad "Nie... czekaj... pięć dni?"
 #dad "Hm...maybe it was something along the lines of a week?"
-dad "Hm...może to było coś w stylu tygodnia?"
+dad "Hm... może to było coś w stylu tygodnia?"
 #mc "Are you seriously asking {b}me{/b} that?"
 mc "Naprawdę {b}mnie{/b} o to pytasz?"
 #dad "No, well, it was something like that."
 dad "Nie, no to było coś takiego."
 #dad "Either way...where was I?"
-dad "Tak czy inaczej... na czym stanęłam?"
+dad "Tak czy inaczej... na czym stanołem?"
 #dad "Oh yeah!"
 dad "O tak!"
 #dad "She didn't want her dad's life or his money..."
-dad "Nie chciała życia taty ani jego pieniędzy..."
+dad "Nie chciała życia jak tata ani jego pieniędzy..."
 #dad "She wanted me."
 dad "Chciała mnie."
 scene d0_fight10 with dissolve

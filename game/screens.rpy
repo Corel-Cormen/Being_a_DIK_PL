@@ -1,6 +1,6 @@
 init python:
     import datetime
-
+    
     MONTHS_PL = {
         "January": "Styczeń",
         "February": "Luty",
@@ -2304,8 +2304,8 @@ init -501:
                 hbox:
                     xalign 0.5
                     spacing 150
-                    textbutton _("Yes") action yes_action text_style "custom_frame_style"
-                    textbutton _("No") action no_action text_style "custom_frame_style"
+                    textbutton _("Tak") action yes_action text_style "custom_frame_style"
+                    textbutton _("Nie") action no_action text_style "custom_frame_style"
         key "game_menu" action no_action
 init -1 style confirm_frame is gui_frame
 init -1 style confirm_prompt is gui_prompt
@@ -2475,9 +2475,9 @@ init -501:
             style_prefix "quick"
             xalign 0.5
             yalign 1.0
-            textbutton _("Back") action Rollback()
-            textbutton _("Skip") action Skip()
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
+            textbutton _("Powrót") action Rollback()
+            textbutton _("Pomić") action Skip()
+            textbutton _("Autogra") action Preference("auto-forward", "toggle")
             textbutton _("Menu") action ShowMenu()
 init -1:
     style window:
@@ -2583,13 +2583,13 @@ init -501:
         tag srmsg
         timer 3 action Hide('srmsg')
         imagebutton at show_hide_dissolve idle "bg_toprightmsg" xalign 0.9825 yalign -0.01 action NullAction()
-        text "{size=+3}{font=collegiate.ttf}{color=#ffffff}You unlocked a special render!{/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+        text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Odblokowałeś specjalny render!{/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
 init -501:
     screen skillmsg:
         modal False
         tag skillmsg
         imagebutton at show_hide_dissolve idle "bg_toprightmsg" xalign 0.9825 yalign -0.01 action NullAction()
-        text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Your Skills app was updated.{/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+        text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Twoje umiejętności zostały zaktualizowane.{/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
 init -501:
     screen specialmsg:
         modal False
@@ -2614,24 +2614,24 @@ init -501:
         tag moneymsg
         imagebutton at show_hide_dissolve idle "bg_toprightmsg" xalign 0.9825 yalign -0.01 action NullAction()
         if money == 5:
-            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Pocket money:{/color} {color=#36ca2b}$$$$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Kieszonkowe:{/color} {color=#36ca2b}$$$$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
         elif money == 4:
-            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Pocket money:{/color} {color=#36ca2b}$$$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Kieszonkowe:{/color} {color=#36ca2b}$$$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
         elif money == 3:
-            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Pocket money:{/color} {color=#36ca2b}$$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Kieszonkowe:{/color} {color=#36ca2b}$$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
         elif money == 2:
-            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Pocket money:{/color} {color=#36ca2b}$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Kieszonkowe:{/color} {color=#36ca2b}$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
         elif money == 1:
-            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Pocket money:{/color} {color=#36ca2b}${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Kieszonkowe:{/color} {color=#36ca2b}${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
         else:
-            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Pocket money:{/color} {color=#36ca2b}No money{/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Kieszonkowe:{/color} {color=#36ca2b}Brak pieniędzy{/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
 init -501:
     screen scoremsg:
         modal False
         tag toprightmsg
         timer 3 action Hide('scoremsg')
         imagebutton at show_hide_dissolve idle "bg_toprightmsg" xalign 0.9825 yalign -0.01 action NullAction()
-        text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Your DIK score was updated!{/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+        text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Twój wynik DIK został zaktualizowany!{/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
 init -1:
     transform show_hide_dissolve:
         on hide:
@@ -2848,7 +2848,7 @@ init -501:
             if money > 0:
                 $ mny = "{color=#36ca2b}$%d{/color}" % money
             else:
-                $ mny = "{color=#36ca2b}No money{/color}"
+                $ mny = "{color=#36ca2b}Brak pieniędzy{/color}"
         else:
             if money == 5:
                 $ mny = "{color=#36ca2b}$$$$${/color}"
@@ -2861,27 +2861,27 @@ init -501:
             elif money == 1:
                 $ mny = "{color=#36ca2b}${/color}"
             elif money == 0:
-                $ mny = "{color=#36ca2b}No money{/color}"
+                $ mny = "{color=#36ca2b}Brak pieniędzy{/color}"
         $ totalPassedClasses = passedEnglish + passedMath + passedGender
         $ totalPerfectClasses = maxedEnglish + maxedMath + maxedGender
         $ totalFailedClasses = failedEnglish + failedMath + failedGender
         if affinity == "DIK":
             $ affinityStr = "{color=#fe9416}{font=collegiate.ttf}DIK{/font}{/color} affinity"
         elif affinity == "CHICK":
-            $ affinityStr = "{color=#00a0e6}{font=collegiate.ttf}CHICK{/font}{/color} affinity"
+            $ affinityStr = "{color=#00a0e6}{font=collegiate.ttf}SIMP{/font}{/color} affinity"
         else:
             $ affinityStr = "{color=#91f360}{font=collegiate.ttf}Neutral{/font}{/color} affinity"
         if currentEpisode < 6:
             if permanent_affinity:
                 if minigames:
-                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} score: [dik]\nPermanent affinity: [affinityStr]\nNumber of major {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} choices: [cpenalty]\nNumber of major {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} choices: [dpenalty]\nNumber of {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} actions: [totalDikChoices]\nNumber of {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} actions: [totalChickChoices]\nMoney: [mny]\nPassed classes: [totalPassedClasses]\nPerfect classes: [totalPerfectClasses]\nFailed classes: [totalFailedClasses]{/size}{/font}" at show_hide_dissolve yalign 0.75 xalign 0.98 text_align 0.0 yoffset -100 size 40 hover_outlines [(1, "#660066", 0, 0)]
+                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wynik: [dik]\nStała ranga: [affinityStr]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wyborów: [cpenalty]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} wyborów: [dpenalty]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} akcji: [totalDikChoices]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} akcji: [totalChickChoices]\nPieniądze: [mny]\nZaliczone zajęcia: [totalPassedClasses]\nZajęcia na piątkę: [totalPerfectClasses]\nNiezaliczone zajęcia: [totalFailedClasses]{/size}{/font}" at show_hide_dissolve yalign 0.75 xalign 0.98 text_align 0.0 yoffset -100 size 40 hover_outlines [(1, "#660066", 0, 0)]
                 else:
-                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} score: [dik]nPermanent affinity: [affinityStr]\nNumber of major {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} choices: [cpenalty]\nNumber of major {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} choices: [dpenalty]\nNumber of {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} actions: [totalDikChoices]\nNumber of {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} actions: [totalChickChoices]\nMoney: [mny]{/size}{/font}" at show_hide_dissolve yalign 0.6 xalign 0.98 text_align 0.0 yoffset -100 size 40 hover_outlines [(1, "#660066", 0, 0)]
+                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wynik: [dik]\nStała ranga: [affinityStr]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wyborów: [cpenalty]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} wyborów: [dpenalty]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} akcji: [totalDikChoices]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} akcji: [totalChickChoices]\nPieniądze: [mny]{/size}{/font}" at show_hide_dissolve yalign 0.6 xalign 0.98 text_align 0.0 yoffset -100 size 40 hover_outlines [(1, "#660066", 0, 0)]
             else:
                 if minigames:
-                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} score: [dik]\nCurrent affinity: [affinityStr]\nNumber of major {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} choices: [cpenalty]\nNumber of major {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} choices: [dpenalty]\nNumber of {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} actions: [totalDikChoices]\nNumber of {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} actions: [totalChickChoices]\nMoney: [mny]\nPassed classes: [totalPassedClasses]\nPerfect classes: [totalPerfectClasses]\nFailed classes: [totalFailedClasses]{/size}{/font}" at show_hide_dissolve yalign 0.75 xalign 0.98 text_align 0.0 size 40 hover_outlines [(1, "#660066", 0, 0)]
+                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wynik: [dik]\nObecna ranga: [affinityStr]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wyborów: [cpenalty]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} wyborów: [dpenalty]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} akcji: [totalDikChoices]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} akcji: [totalChickChoices]\nPieniądze: [mny]\nZaliczone zajęcia: [totalPassedClasses]\nZajęcia na piątkę: [totalPerfectClasses]\nNiezaliczone zajęcia: [totalFailedClasses]{/size}{/font}" at show_hide_dissolve yalign 0.75 xalign 0.98 text_align 0.0 size 40 hover_outlines [(1, "#660066", 0, 0)]
                 else:
-                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} score: [dik]\nCurrent affinity: [affinityStr]\nNumber of major {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} choices: [cpenalty]\nNumber of major {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} choices: [dpenalty]\nNumber of {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} actions: [totalDikChoices]\nNumber of {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} actions: [totalChickChoices]\nMoney: [mny]{/size}{/font}" at show_hide_dissolve yalign 0.6 xalign 0.98 text_align 0.0 size 40 hover_outlines [(1, "#660066", 0, 0)]
+                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wynik: [dik]\nObecna ranga: [affinityStr]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wyborów: [cpenalty]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} wyborów: [dpenalty]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} akcji: [totalDikChoices]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} akcji: [totalChickChoices]\nPieniądze: [mny]{/size}{/font}" at show_hide_dissolve yalign 0.6 xalign 0.98 text_align 0.0 size 40 hover_outlines [(1, "#660066", 0, 0)]
         else:
             if minigames:
                 $ totalPassedClasses = passedEnglish + passedMath + passedGender
@@ -2889,14 +2889,14 @@ init -501:
                 $ totalFailedClasses = failedEnglish + failedMath + failedGender
             if permanent_affinity:
                 if minigames:
-                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} score: [dik]\nPermanent affinity: [affinityStr]\nNumber of major {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} choices: [cpenalty]\nNumber of major {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} choices: [dpenalty]\nNumber of {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} actions: [totalDikChoices]\nNumber of {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} actions: [totalChickChoices]\nMoney: [mny]\nPassed classes: [totalPassedClasses]\nPerfect classes: [totalPerfectClasses]\nFailed classes: [totalFailedClasses]\nMansion score: {color=#ffed00}[mansion_score]{/color}\nMansion money: {color=#fe9416}$[mansion_money]{/color}{/size}{/font}" at show_hide_dissolve yalign 0.76 xalign 0.94 text_align 0.0 yoffset -100 size 33 hover_outlines [(1, "#660066", 0, 0)]
+                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wynik: [dik]\nStała ranga: [affinityStr]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wyborów: [cpenalty]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} wyborów: [dpenalty]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} akcji: [totalDikChoices]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} akcji: [totalChickChoices]\nPieniądze: [mny]\nZaliczone zajęcia: [totalPassedClasses]\nZajęcia na piątkę: [totalPerfectClasses]\nNiezaliczone zajęcia: [totalFailedClasses]\nWynik rezydencji: {color=#ffed00}[mansion_score]{/color}\nPieniądze rezydencji: {color=#fe9416}$[mansion_money]{/color}{/size}{/font}" at show_hide_dissolve yalign 0.76 xalign 0.94 text_align 0.0 yoffset -100 size 33 hover_outlines [(1, "#660066", 0, 0)]
                 else:
-                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} score: [dik]\nPermanent affinity: [affinityStr]\nNumber of major {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} choices: [cpenalty]\nNumber of major {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} choices: [dpenalty]\nNumber of {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} actions: [totalDikChoices]\nNumber of {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} actions: [totalChickChoices]\nMoney: [mny]{/size}{/font}" at show_hide_dissolve yalign 0.6 xalign 0.98 text_align 0.0 yoffset -100 size 38 hover_outlines [(1, "#660066", 0, 0)]
+                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wynik: [dik]\nStała ranga: [affinityStr]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wyborów: [cpenalty]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} wyborów: [dpenalty]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} akcji: [totalDikChoices]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} akcji: [totalChickChoices]\nPieniądze: [mny]{/size}{/font}" at show_hide_dissolve yalign 0.6 xalign 0.98 text_align 0.0 yoffset -100 size 38 hover_outlines [(1, "#660066", 0, 0)]
             else:
                 if minigames:
-                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} score: [dik]\nCurrent affinity: [affinityStr]\nNumber of major {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} choices: [cpenalty]\nNumber of major {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} choices: [dpenalty]\nNumber of {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} actions: [totalDikChoices]\nNumber of {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} actions: [totalChickChoices]\nMoney: [mny]\nPassed classes: [totalPassedClasses]\nPerfect classes: [totalPerfectClasses]\nFailed classes: [totalFailedClasses]\nMansion score: {color=#ffed00}[mansion_score]{/color}\nMansion money: {color=#fe9416}$[mansion_money]{/color}{/size}{/font}" at show_hide_dissolve yalign 0.76 xalign 0.94 text_align 0.0 size 33 hover_outlines [(1, "#660066", 0, 0)]
+                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wynik: [dik]\nObecna ranga: [affinityStr]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wyborów: [cpenalty]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} wyborów: [dpenalty]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} akcji: [totalDikChoices]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} akcji: [totalChickChoices]\nPieniądze: [mny]\nZaliczone zajęcia: [totalPassedClasses]\nZajęcia na piątkę: [totalPerfectClasses]\nNiezaliczone zajęcia: [totalFailedClasses]\nWynik rezydencji: {color=#ffed00}[mansion_score]{/color}\nPieniądze rezydencji: {color=#fe9416}$[mansion_money]{/color}{/size}{/font}" at show_hide_dissolve yalign 0.76 xalign 0.94 text_align 0.0 size 33 hover_outlines [(1, "#660066", 0, 0)]
                 else:
-                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} score: [dik]\nCurrent affinity: [affinityStr]\nNumber of major {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} choices: [cpenalty]\nNumber of major {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} choices: [dpenalty]\nNumber of {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} actions: [totalDikChoices]\nNumber of {color=#00a0e6}{size=+3}{font=collegiate.ttf}Chick{/font}{/size}{/color} actions: [totalChickChoices]\nMoney: [mny]{/size}{/font}" at show_hide_dissolve yalign 0.6 xalign 0.98 text_align 0.0 size 38 hover_outlines [(1, "#660066", 0, 0)]
+                    text "{font=candara.ttf}{size=+10}{color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wynik: [dik]\nObecna ranga: [affinityStr]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} wyborów: [cpenalty]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} wyborów: [dpenalty]\nLiczba {color=#fe9416}{size=+3}{font=collegiate.ttf}DIK{/font}{/size}{/color} akcji: [totalDikChoices]\nLiczba {color=#00a0e6}{size=+3}{font=collegiate.ttf}Simp{/font}{/size}{/color} akcji: [totalChickChoices]\nPieniądze: [mny]{/size}{/font}" at show_hide_dissolve yalign 0.6 xalign 0.98 text_align 0.0 size 38 hover_outlines [(1, "#660066", 0, 0)]
 init -501:
     screen endingGirlScreen:
         modal True
@@ -3533,7 +3533,7 @@ init -501:
                 key "K_PAGEDOWN" action Hide("nonexistent_screen")
                 key "mouseup_3" action Hide("nonexistent_screen")
                 key "mouseup_1" action Hide("nonexistent_screen")
-                text "Thank you for your purchase of\n{color=ffed00}Being a DIK - The complete official guide.{/color}\n\nPress '{color=#00ff00}g{/color}' to show and hide the guide.\nYou can also press the {color=fe9416}Guide{/color} button in the quick menu\nto open the guide.\n\nPress '{color=#00ff00}g{/color}' to continue." style "guide_style_s2" xalign 0.2 yalign 0.3
+                text "Dziękuję za zakup\n{color=ffed00}Being a DIK - kompletny oficjalny przewodnik.{/color}\n\nWciśnij '{color=#00ff00}g{/color}' aby wyświetlić lub ukryć przewodnik.\nMożesz również nacisnąć przycisk {color=fe9416}Przewodnik{/color} w menu gry\naby otworzyć przewodnik.\n\Wciśnij '{color=#00ff00}g{/color}' aby kontynuować." style "guide_style_s2" xalign 0.2 yalign 0.3
                 key "g" action (SetVariable("tmpMenu2", quick_menu), SetVariable("quick_menu", 0), SetVariable("persistent.walkthrough_tutorial", True),Function(show_guide_func))
             else:
                 key "g" action (SetVariable("tmpMenu2", quick_menu), SetVariable("quick_menu", 0),Function(show_guide_func))
@@ -3622,7 +3622,7 @@ init -501:
             xalign 0.5
             yalign 0.5
             imagebutton idle "tennis_tutorial" hover "tennis_tutorial" action Jump("ep4_tennis_label2")
-        text "In the tennis mini-game you must find and click the tennis ball that reads {color=#00ff00}HIT{/color},\nwhile avoiding to click on the tennis balls that read {color=#ff0000}MISS{/color}.\nTime your shot with the power gauge to the right to hit the ball harder.\nIf you take too long finding and clicking the correct tennis ball, you will miss your shot." style "tennis_tutorial_style" xalign 0.5 yalign 0.85 text_align 0.5 xmaximum 1550
+        text "W mini-grze tenisowej musisz znaleźć i kliknąć piłkę tenisową z napisem {color=#00ff00}UDEŻ{/color},\nunikając kliknięcia piłek tenisowych z napisem {color=#ff0000}PUŚĆ{/color}.\nWybierz odpowiedni moment uderzenia za pomocą wskaźnika siły po prawej stronie, aby uderzyć piłkę mocniej.\nJeśli zbyt długo będziesz szukać i klikać właściwą piłkę tenisową, przegapisz swój strzał." style "tennis_tutorial_style" xalign 0.5 yalign 0.85 text_align 0.5 xmaximum 1550
 init -501:
     screen foundmoneymsg:
         modal False
@@ -3630,17 +3630,17 @@ init -501:
         timer 3 action Hide('foundmoneymsg')
         imagebutton at show_hide_dissolve idle "bg_toprightmsg" xalign 0.9825 yalign -0.01 action NullAction()
         if money == 5:
-            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Pocket money:{/color} {color=#36ca2b}$$$$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Kieszonkowe:{/color} {color=#36ca2b}$$$$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
         elif money == 4:
-            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Pocket money:{/color} {color=#36ca2b}$$$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Kieszonkowe:{/color} {color=#36ca2b}$$$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
         elif money == 3:
-            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Pocket money:{/color} {color=#36ca2b}$$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Kieszonkowe:{/color} {color=#36ca2b}$$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
         elif money == 2:
-            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Pocket money:{/color} {color=#36ca2b}$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Kieszonkowe:{/color} {color=#36ca2b}$${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
         elif money == 1:
-            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Pocket money:{/color} {color=#36ca2b}${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Kieszonkowe:{/color} {color=#36ca2b}${/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
         else:
-            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Pocket money:{/color} {color=#36ca2b}No money{/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Kieszonkowe:{/color} {color=#36ca2b}Brak pieniędzy{/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
 init -501:
     screen newmoneymsg:
         modal False
@@ -3657,9 +3657,9 @@ init -501:
         elif money < 0:
             $ money = 0
         if money > 0:
-            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Pocket money:{/color} {color=#36ca2b}$%i{/color}{/font}{/size}" % money at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Kieszonkowe:{/color} {color=#36ca2b}$%i{/color}{/font}{/size}" % money at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
         else:
-            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Pocket money:{/color} {color=#36ca2b}No money{/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+            text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Kieszonkowe:{/color} {color=#36ca2b}Brak pieniędzy{/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
 init -1:
     python:
         def savePersistentData():
@@ -3672,5 +3672,5 @@ init -501:
         tag saveMsg
         timer 3 action Hide("saveMsg")
         imagebutton at show_hide_dissolve idle "bg_toprightmsg" xalign 0.9825 yalign -0.01 action NullAction()
-        text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Collectible data saved!{/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
+        text "{size=+3}{font=collegiate.ttf}{color=#ffffff}Dane kolekcjonerskie zapisane!{/color}{/font}{/size}" at show_hide_dissolve xalign 0.97 yalign 0.018 size 31 color "#ffffff"
 return
